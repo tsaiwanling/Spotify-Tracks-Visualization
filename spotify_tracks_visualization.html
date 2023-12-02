@@ -2,21 +2,9 @@
 <html>
 <head>
 	<link rel='stylesheet' type='text/css' href='spotify.css'>
-	<script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3@7.0/dist/d3.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src='main.js'></script>
-    <script src='song_output.js'></script>
-    <script src='artist_output.js'></script>
-    <script src='analysis.js'></script>
-    <script src='menu.js'></script>
-    <script src='search.js'></script>
-    <script>
-        $("#myInput").keyup(function(event) {
-            if (event.keyCode === 13) {
-                $("#searchButton").click();
-            }
-        });
-    </script>
+    
 	<meta name='viewport' content='width=device-width,initial-scale=1' charset='utf-8'>
 	<title>Spotify Track Recommendataion</title>
 </head>
@@ -63,6 +51,20 @@
             <div class="songContent scrollbar" id="my_dataviz"></div>
         </div>
         <div class="analysis scrollbarThin" id="analysis"></div>
+
+        <script src='main.js'></script>
+        <script src='song_output.js'></script>
+        <script src='artist_output.js'></script>
+        <script src='analysis.js'></script>
+        <script src='menu.js'></script>
+        <script src='search.js'></script>
+        <script>
+            $("#myInput").keyup(function(event) {
+                if (event.keyCode === 13) {
+                    $("#searchButton").click();
+                }
+            });
+        </script>
 	</div>
 </body>
 </html>
