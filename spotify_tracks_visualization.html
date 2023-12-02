@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' type='text/css' href='spotify.css'>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=no' charset='utf-8'>
+
+	<title>Spotify Track Recommendataion</title>
+</head>
+
+<body>
+	<div class='wrap'>
+        <div class="left-menu">
+            <button class="home-item" value=""></button>
+            <div class="horizontal-line"></div>
+            <div>
+                <button class="menu-item" value="speechiness">Talk Show</button>
+                <button class="menu-item" value="liveness">Live Show</button>
+                <button class="menu-item" value="danceability">Dance Music</button>   
+            </div>        
+            <div class="Genre scrollbarThin" id="genre-menu">Genre</div>
+        </div>
+        <div class="content">
+            <div style="display: flex; flex-direction: row-reverse; padding-bottom: 20px;">               
+                <input class="search-item" id="searchButton" type="button" onClick="mySearch()">
+                <input type="text" id="myInput" onfocus="this.value=''"placeholder="Search" title="Type in a name" style="flex: 1;">
+            </div>
+            <div id="homeOnly" style="width: 60vw; text-align:right;">
+                <span class="sort-menu" onmouseover="switchMenu( this, 'SortMenu', 'MouseOver' )" onmouseout="hideMenu()">Sort <span style="font-size:9px;">&#9660;</span>
+                    <ul id="SortMenu" class="sub-menu" style="display:none; min-width: 110px;">
+                        <li value="Popularity">Top 500</a></li>
+                        <li value="Artist">Artist</li>
+                        <span onmouseover="switchSubMenu( this, 'SortMenu2', 'MouseOver' )" onmouseout="hideSubMenu()" value="valence">Valence
+                            <ul id="SortMenu2" class="sub-menu2" style="display:none; min-width: 110px;">
+                                <li value="valence1">Optimism</li>
+                                <li value="valence2">Inactive</li>
+                            </ul>
+                        </span>
+                        <span onmouseover="switchSubMenu( this, 'SortMenu3', 'MouseOver' )" onmouseout="hideSubMenu()" value="instrumentalness">Instrumentalness
+                            <ul id="SortMenu3" class="sub-menu2" style="display:none; min-width: 200px;">
+                                <li value="instrumentalness1">Instrumental(no vocal)</li>
+                                <li value="instrumentalness2">Vocal</li>
+                            </ul>
+                        </span>
+                    </ul>
+                </span>
+            </div>
+            <div class="songTitle-div" id="Title"></div>
+            <div class="horizontal-line"></div>
+            <div class="songContent scrollbar" id="my_dataviz"></div>
+        </div>
+        <div class="analysis scrollbarThin" id="analysis"></div>
+	</div>
+	<script src='main.js'></script>
+    <script src='song_output.js'></script>
+    <script src='artist_output.js'></script>
+    <script src='analysis.js'></script>
+    <script src='menu.js'></script>
+    <script src='search.js'></script>
+    <script>
+        $("#myInput").keyup(function(event) {
+            if (event.keyCode === 13) {
+                $("#searchButton").click();
+            }
+        });
+    </script>
+</body>
+</html>

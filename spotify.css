@@ -1,0 +1,260 @@
+html{
+    background-color: gray;
+    min-width: 1000px;
+    min-height: 800px;
+    /* overflow: hidden; */
+}
+body{
+    padding: 0;
+    margin-left: 2vh;
+    margin-right: 2vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.wrap{
+    display: flex;
+}
+
+.horizontal-line {
+    border-top: 2px solid #ffffff; /* 设置水平线的颜色和样式 */
+    margin: 0; /* 去除默认的 margin */
+    padding: 5px;
+}
+/*Left*/
+.left-menu{
+    flex-direction: column;
+    margin-top: 5vh;
+    width: 10vw;
+    height: 90vh;
+    background: rgb(57, 58, 59);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding:10px;
+    display: flex;
+}
+
+.home-item{
+    width: 4vw;
+    height: 4vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background: url('home.png') center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    display: block;
+    cursor:pointer;
+}
+.menu-item{
+    width: 10vw;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    font:15px sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background: rgb(82, 87, 92);
+    color: white;
+    border: none;
+    border-radius: 10px;    
+    display: block;
+    cursor:pointer;
+}
+.Genre{
+    flex: 1;
+    overflow: hidden;
+    background-color: rgb(82, 87, 92);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font:15px sans-serif;
+    font-weight: bold;
+}
+.Genre:hover{
+    overflow-y:auto;
+}
+
+.Genre button{
+    width: 8vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    font:15px sans-serif;
+    font-weight: bold;
+    background: rgb(91, 153, 216);
+    color: lightgray;
+    border: 0px;
+    border-radius: 3px;    
+    display: block;
+    cursor:pointer;
+}
+
+
+/*Middle*/
+.search-item{
+    width: 2vw;
+    height: 2vw;
+    margin: 5px;
+    background: url('search.png') center center no-repeat;
+    background-size: 100% 100%;
+    border: none;
+    display: block;
+    cursor:pointer;
+}
+
+.content{
+    flex-grow: 1;
+    margin-top: 3vh;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 60vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.songContent{
+    flex: 1;
+    border: none;
+    overflow-y: hidden;
+    color: white;
+    background-color: gray;
+    font: 12px sans-serif;
+}
+.songContent:hover{
+    overflow-y: auto;
+}
+
+.artist_name:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*Right*/
+.analysis{
+    flex-grow: 2;
+    width: 18vw;
+    padding: 15px;
+    margin-top: 5vh;
+    height: 90vh;
+    font: 15px sans-serif;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(53, 49, 49);;
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.analysis:hover{
+    overflow: auto;
+}
+.mode{
+    border-radius: 8px;
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(80, 78, 78);
+    padding: 5px;
+}
+.timeSign{
+    border-radius: 8px;
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(80, 78, 78);
+    padding: 5px;
+}
+.distribution{
+    border-radius: 8px;
+    margin:10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(80, 78, 78);
+    padding: 5px;
+}
+
+/* Others Tools */
+.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 20px;
+    font: 20px sans-serif;
+    background: rgb(54, 52, 52);
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+.tooltipSmall {
+    position: absolute;
+    text-align: left;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: rgb(54, 52, 52);
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.list-title {background-color: gray; color: white; font: 15px sans-serif;}
+.song-item {background-color: gray;}
+.song-item:hover {background-color: rgb(63, 62, 62);}
+.artist-item {background-color: gray; cursor: pointer;}
+
+.sort-menu { color:#FFFFFF; background-color: gray; padding:5px; margin:0px; cursor:pointer; display:inline-block; font: 15px sans-serif; z-index: 999;} /* 主選單的樣式 */
+.sort-menu:hover { background-color:#323245; }
+
+.sub-menu { color:#323245; background-color:#CCCCCC; margin:5px -5px; padding:0px; list-style-type:none; position:absolute; z-index: 999; } /* 下拉清單的樣式 */
+.sub-menu li { padding: 3px 5px; text-align:center; display:block; text-decoration:none; color:#323245; } /* 下拉清單每一列的樣式 */
+.sub-menu li:hover { color:#FFFFFF; background-color:#323245; text-decoration:none; }
+
+.sub-menu2 { color:#323245; background-color:#2d2d2d; margin:5px -5px; padding:0px; list-style-type:none; position:absolute; z-index: 999; font: 15px sans-serif;} /* 下拉清單的樣式 */
+.sub-menu2 li { padding: 3px 5px; text-align:center; display:block; text-decoration:none; color:#FFFFFF; border: 1px solid white;} /* 下拉清單每一列的樣式 */
+.sub-menu2 li:hover { color:#FFFFFF; background-color:#383865; text-decoration:none; border: 1px solid white;}
+
+.sub-menu span { padding: 3px 5px; text-align:center; display:block; text-decoration:none; color:#323245; } /* 下拉清單每一列的樣式 */
+.sub-menu span:hover { color:#FFFFFF; background-color:#323245; text-decoration:none; }
+
+
+.scrollbar::-webkit-scrollbar {
+    width: 15px;
+}
+.scrollbar::-webkit-scrollbar-track-piece {
+    background-color: gray;
+} /* 內層滑軌 */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: lightgray;
+} /* 外層滑軌 */
+.scrollbar::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+} /* 滾動調內層滑塊 */
+.scrollbar::-webkit-scrollbar-button {
+    background-color: lightgray;
+    display: none;
+} /* 滑軌兩頭 */
+
+.scrollbarThin::-webkit-scrollbar {
+    width: 5px;
+}
+.scrollbarThin::-webkit-scrollbar-track-piece {
+    background-color: gray;
+} /* 內層滑軌 */
+.scrollbarThin::-webkit-scrollbar-track {
+    background-color: lightgray;
+} /* 外層滑軌 */
+.scrollbarThin::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    border-radius: 10px;
+} /* 滾動調內層滑塊 */
+.scrollbarThin::-webkit-scrollbar-button {
+    background-color: lightgray;
+    display: none;
+} /* 滑軌兩頭 */
+
+
